@@ -1,0 +1,219 @@
+html {
+  background-size: 100%;
+}
+
+.add-file {
+  font-size: 16px;
+}
+
+.App-header {
+  position: fixed;
+  width: 100%;
+  background-color: #727272;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.body {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.body-main-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  align-content: center;
+  gap: 7vh;
+  background-color: #efefef;
+  width: 90vw;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10vh;
+}
+
+.change-ingredient-button {
+  margin: auto 20px;
+  height: 4vh;
+  width: 10vw;
+  border-style: none;
+  border-radius: 30px;
+  font-size: 16px;
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+.create-pizza-button {
+  width: 120px;
+  height: 30px;
+  background-color: #F5F5F5;
+  border-style: none;
+  border-radius: 30px;
+}
+
+.create-pizza-form {
+  margin: auto;
+  width: 40vw;
+  height: 70vh;
+  background-color: #a4b499;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 30px;
+}
+
+.create-pizza-header {
+  text-align: center;
+}
+
+.create-form-button {
+  height: 4vh;
+  width: 9vw;
+  font-size: 16px;
+  background-color: #d2f1f1;
+  border-style: none;
+  border-radius: 10px;
+}
+
+.delete-pizza-button {
+  position: absolute;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #e1bbbb;
+  border: solid 2px #652828;
+}
+
+.ingredient-choice {
+  height: 4vh;
+  width: 6vw;
+  background-color: #ffffff;
+  font-size: 16px;
+  margin: 1vh 1vw;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.ingredient-choice-box {
+  width: 100%;
+  text-align: center;
+  height: 18vh;
+}
+
+.input-box {
+  height: 4vh;
+  width: 14vw;
+  text-align: center;
+  border: #212121 1px solid;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 72vw;
+}
+
+.main-menu-button {
+  background-color: #212121;
+  width: 170px;
+  height: 50px;
+  border-radius: 20px;
+  border-style: none;
+  color: #F5F5F5;
+  font-size: 16px;
+}
+
+.main-menu-button:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+.main-menu-search-bar {
+  background-color: #ffffff;
+  width: 200px;
+  height: 30px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-style: none;
+  padding-left: 20px;
+}
+
+.main-menu-search-button {
+  background-color: #cde0bd;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-style: none;
+  border-left: #727272 3px solid;
+  width: 70px;
+  height: 30px;
+}
+
+.main-menu-search-button:hover {
+  cursor: pointer;
+  background-color: #a4b499;
+}
+
+.paginationBar {
+  width: 90%;
+  height: 5vh;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-top: 5vh;
+  font-size: 18px;
+}
+
+.paginationBar a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 2px solid #727272;
+  color: #727272;
+  cursor: pointer;
+}
+
+.paginationBar a:hover {
+  color: white;
+  background-color: #bdbdbd;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #727272;
+}
+
+.paginationDisabled a {
+  visibility: hidden;
+}
+
+.pizza-object {
+  margin-top: 2vh;
+  margin-bottom: 4vh;
+}
+
+.pizza-object-img {
+  max-height: 30vh;
+  background-size: cover;
+  max-width: 25vw;
+
+}
+
+.greeting {
+  color: white;
+  font-size: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
