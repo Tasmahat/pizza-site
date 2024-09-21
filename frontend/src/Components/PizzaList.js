@@ -135,14 +135,14 @@ function PizzaList() {
         mutex
             .runExclusive(() => {
             })
-            .then(async () => {
-                const response = await fetch (
-                    fetchAdr + pageNumber,
-                    {method: "GET", redirect: "follow", credentials: "include"}
-                ).then((response) => response);
-                const data = await response.json();
-                setPizzas(data.content);
-                setLoading(false);
+            .then(() => {
+                fetch(fetchAdr + pageNumber,
+                    {method: "GET", redirect: "follow", credentials: "include"})
+                    .then(response => response.json())
+                    .then(data => {
+                        setPizzas(data.content);
+                        setLoading(false);
+                    });
             })
     }
 
