@@ -134,15 +134,15 @@ function PizzaList() {
         setPageNumber(event.selected);
         mutex
             .runExclusive(() => {
-            fetchAdr = 'api/api/page/' + event.selected;
             })
-            .then(() => {
-                fetch(fetchAdr)
-                    .then(response => response.json())
-                    .then(data => {
-                        setPizzas(data.content);
-                        setLoading(false);
-                    });
+            .then(async () => {
+                const response = await fetch (
+                    fetchAdr + pageNumber,
+                    {method: "GET", redirect: "follow", credentials: "include"}
+                ).then((response) => response);
+                const data = await response.json();
+                setPizzas(data.content);
+                setLoading(false);
             })
     }
 
