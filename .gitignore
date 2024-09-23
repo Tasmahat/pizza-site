@@ -1,6 +1,9 @@
 HELP.md
+build/*
+!/build/libs
+build/libs/*
+!build/libs/pizza_site-0.0.1-SNAPSHOT.jar
 .gradle
-build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
