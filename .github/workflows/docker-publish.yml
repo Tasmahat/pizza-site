@@ -5,15 +5,7 @@ name: Docker
 # separate terms of service, privacy policy, and support
 # documentation.
 
-on:
-  schedule:
-    - cron: '19 3 * * *'
-  push:
-    branches: [ "master" ]
-    # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
-  pull_request:
-    branches: [ "master" ]
+on: [push]
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -44,6 +36,9 @@ jobs:
         uses: sigstore/cosign-installer@59acb6260d9c0ba8f4a2f9d9b48431a222b68e20 #v3.5.0
         with:
           cosign-release: 'v2.2.4'
+          
+      - name: docker build
+        run: docker-compose up
 
       # Set up BuildKit Docker container builder to be able to build
       # multi-platform images and export cache
